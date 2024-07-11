@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import TaskContext from "../context/task";
+import TodoShow from "./TodoShow";
 
 export default function TodoFormList() {
   const { todo } = useContext(TaskContext);
@@ -8,7 +9,8 @@ export default function TodoFormList() {
     <div>
       <ul>
         {todo.map((item, index) => (
-          <li key={index}> {item.text}</li>
+          <TodoShow key={index} item={item} index={index} />
+    
         ))}
       </ul>
     </div>
