@@ -9,7 +9,7 @@ export default function TodoFormList() {
     <div>
       <ul>
         {todo.map((item, index) => (
-          <TodoShow key={index} item={item} index={index} />
+                    <TodoShow key={index} item={item} index={index} />
     
         ))}
       </ul>
