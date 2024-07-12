@@ -1,5 +1,6 @@
 import "./App.css";
 import TodoFormList from "./components/TodoFormList";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
       <section className="todoapp">
         <TodoFormList />
       </section>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
