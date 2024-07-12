@@ -14,7 +14,7 @@ function Footer() {
         <p className="footer">
           Thank you Dmitry Sharabin.
           <br />
-          <a href="https://github.com/mehmetulker/react-todo">
+          <a href="https://github.com/mehmetulker/react-todo" target="_blank">
             Updated by Mehmet ÜLKER using the React library.
           </a>
         </p>
