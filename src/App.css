@@ -1,3 +1,4 @@
+/* index.css */
 html,
 body {
   margin: 0;
@@ -38,8 +39,7 @@ body {
 }
 
 .hidden {
-  /* display: none; */
-  visibility: visible;
+  display: none;
 }
 
 .todoapp {
@@ -52,7 +52,7 @@ body {
 .todoapp input::-webkit-input-placeholder {
   font-style: italic;
   font-weight: 300;
-  color: #e6e6e6;
+  color: #9e2323;
 }
 
 .todoapp input::-moz-placeholder {
@@ -216,7 +216,7 @@ body {
 }
 
 .todo-list li.completed label {
-  color: #d9d9d9;
+  color: #4fff58;
   text-decoration: line-through;
 }
 
@@ -349,7 +349,7 @@ html .clear-completed:active {
 
 .info a:hover {
   text-decoration: underline;
-  color:blue
+  color: blue;
 }
 
 /*
@@ -422,5 +422,5 @@ meta,
 
 .info .footer {
   color: #757575;
-  font-size: 16px
+  font-size: 16px;
 }
