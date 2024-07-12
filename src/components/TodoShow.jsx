@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import TasksContext from "../context/task";
 
 export default function TodoShow({ index, item }) {
+  const { deleteTaskById, updatedCheckTaskById } = useContext(TasksContext);
+
+  const handleDeleteClick = () => {
+    deleteTaskById(index);
+  };
+
+  const onChangeCheck = () => {
+    updatedCheckTaskById(index);
+  };
   return (
     <div>
       <section className="main">
@@ -17,9 +27,13 @@ export default function TodoShow({ index, item }) {
                   type="checkbox"
                   name="done"
                   defaultChecked={item.done === true ? "checked" : ""}
+                  onChange={onChangeCheck}
                 />
                 <label>{item.text}</label>
-                <button className="destroy"></button>
+                <button
+                  onClick={handleDeleteClick}
+                  className="destroy"
+                ></button>
               </div>
             </li>
           }

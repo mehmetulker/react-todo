@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "WebDeveloperTraining",
+		"path": "../.."
+	}
+],
+  "settings": {
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    }
+  }
+}
