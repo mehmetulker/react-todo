@@ -16,8 +16,9 @@ export default function TodoShow({ index, item }) {
 
   const handleEditClick = () => {
     setIsEditing(!isEditing);
-  };
 
+  };
+  
   return (
     <div>
       {isEditing ? (
