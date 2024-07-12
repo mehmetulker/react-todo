@@ -16,7 +16,7 @@ export default function TodoShow({ index, item }) {
                   className="toggle"
                   type="checkbox"
                   name="done"
-                  checked={`${item.done === true ? "checked" : ""}`}
+                  defaultChecked={item.done === true ? "checked" : ""}
                 />
                 <label>{item.text}</label>
                 <button className="destroy"></button>
