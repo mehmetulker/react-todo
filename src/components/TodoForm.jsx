@@ -20,7 +20,6 @@ function TodoForm({
 
   const [form, setForm] = useState(initialFormState);
 
-
   const onChangeInput = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -35,7 +34,7 @@ function TodoForm({
       return false;
     }
     setTodo([...todo, form]);
-  
+
     setForm({ text: "", done: "" });
     //addContact((prevState)=[...prevState,form]);
   };
@@ -67,15 +66,17 @@ function TodoForm({
             />
           </form>
         ) : (
-          <form onSubmit={onSubmit}>
-            <input
-              name="text"
-              className="new-todo"
-              value={form.text}
-              placeholder="What needs to be done?"
-              onChange={onChangeInput}
-            />
-          </form>
+          <div>
+            <form onSubmit={onSubmit}>
+              <input
+                name="text"
+                className="new-todo"
+                value={form.text}
+                placeholder="What needs to be done?"
+                onChange={onChangeInput}
+              />
+            </form>
+          </div>
         )}
       </header>
     </div>
@@ -89,5 +90,3 @@ TodoForm.propTypes = {
   taskFromUpdate: PropTypes.bool,
   setTaskFromUpdate: PropTypes.func,
 };
-
-

@@ -1,4 +1,4 @@
-import React, { useState,createContext } from "react";
+import React, { useEffect, useState, createContext } from "react";
 import PropTypes from "prop-types";
 const TaskContext = createContext();
 
@@ -17,15 +17,12 @@ function Provider({ children }) {
       text: "Give talks",
       done: true,
     },
-    {
-      text: "Patiaka.dev!",
-      done: false,
-    },
 
     {
       text: "Write tutorials",
       done: true,
     },
+
     {
       text: "Promote Mavo",
       done: true,
@@ -37,6 +34,31 @@ function Provider({ children }) {
   ];
 
   const [todo, setTodo] = useState(todoData);
+  const [filter, setfilter] = useState("all");
+  useEffect(() => {}, [todo, filter]);
+
+  ///*************FilteredTodos****************** */
+  const getFilteredTodos = () => {
+    switch (filter) {
+      case "all":
+        return todo;
+      case "active":
+        return todo.filter((todo) => !todo.done);
+      case "completed":
+        return todo.filter((todo) => todo.done);
+      default:
+        return todo;
+    }
+  };
+  console.log(getFilteredTodos);
+
+  ///*************clearcompleted****************** */
+
+  const clearcompleted = () => {
+    const newformList = todo.filter((item) => item.done === false);
+    setTodo(newformList);
+  };
+
   ///*************deleteTaskById****************** */
 
   const deleteTaskById = (index) => {
@@ -60,8 +82,12 @@ function Provider({ children }) {
   const sharedValuesAndMethods = {
     todo,
     setTodo,
-    updatedCheckTaskById,
     deleteTaskById,
+    updatedCheckTaskById,
+    filter,
+    setfilter,
+    clearcompleted,
+    getFilteredTodos,
   };
   return (
     <div>

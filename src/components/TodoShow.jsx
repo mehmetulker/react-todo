@@ -1,10 +1,12 @@
-import { useContext, useState } from "react";
+import { useEffect, useContext, useState } from "react";
 import PropTypes from "prop-types";
 import TasksContext from "../context/task";
 import TodoForm from "./TodoForm";
 export default function TodoShow({ index, item }) {
-  const { deleteTaskById, updatedCheckTaskById } = useContext(TasksContext);
+  const { deleteTaskById, updatedCheckTaskById, todo } =
+    useContext(TasksContext);
   const [isEditing, setIsEditing] = useState(false);
+  useEffect(() => {}, [todo]);
 
   const handleDeleteClick = () => {
     deleteTaskById(index);
@@ -16,9 +18,8 @@ export default function TodoShow({ index, item }) {
 
   const handleEditClick = () => {
     setIsEditing(!isEditing);
-
   };
-  
+
   return (
     <div>
       {isEditing ? (
@@ -43,7 +44,7 @@ export default function TodoShow({ index, item }) {
                     className="toggle"
                     type="checkbox"
                     name="done"
-                    defaultChecked={item.done === true ? "checked" : ""}
+                    checked={`${item.done === true ? "checked" : ""}`}
                     onChange={onChangeCheck}
                   />
                   <label onClick={handleEditClick}>{item.text}</label>
