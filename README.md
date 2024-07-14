@@ -1,8 +1,43 @@
-# React + Vite
+![React Todo App](/src/assets/todo-test-gif.gif)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Todo App.
 
-Currently, two official plugins are available:
+A complete todo application with all features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**live demo: [https://admirable-kitten-5c84ac.netlify.app//](https://admirable-kitten-5c84ac.netlify.app//)**
+
+## Instructions
+
+First clone this repository.
+```bash
+$ git clone https://github.com/mehmetulker/react-todo.git
+```
+
+Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
+```bash
+$ npm install 
+```
+
+Run it
+```bash
+$ npm run dev
+```
+
+## Project Description
+In the project, we will be creating a Complete Todo Application with all features. We will do all the CRUD operations. We will use `React.jsx` and to manage our states, we will use `Context Api` This will be a complete `beginner` friendly app. Hope you enjoy it.
+
+## What we are going to learn/use
+
+- [React]
+- [Components]
+- [UseSate]
+- [UseEfect]
+- [Context Api]
+- More...
+
+## Requirements
+
+- Basic ReactJs knowledge
+- Basic HTML, CSS knowledge
+
+

@@ -1,13 +1,17 @@
-import React from "react";
-
 function Footer() {
   return (
     <div>
       <footer className="info">
         <p>Click to edit a todo</p>
         <p>
-          Created by <a href="https://d12n.me/">Dmitry Sharabin</a>
-          <a href="https://codepen.io/dmitrysharabin/pen/MWgQNYZ">
+          Created by
+          <a href="https://d12n.me/" target="_blank">
+            Dmitry Sharabin
+          </a>
+          <a
+            href="https://codepen.io/dmitrysharabin/pen/MWgQNYZ"
+            target="_blank"
+          >
             Original version of the study
           </a>
         </p>
